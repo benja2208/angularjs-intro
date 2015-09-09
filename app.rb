@@ -1,7 +1,7 @@
 require 'sinatra'
 
-# set :root, File.dirname(__FILE__)
+set :public_folder, 'public'
 
 get '/' do
-  erb :index
+  send_file 'public/index.html'
 end
